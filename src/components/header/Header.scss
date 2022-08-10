@@ -1,0 +1,91 @@
+@import "../../common/color.scss";
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background :rgba(0,0,0,0.6);
+}
+
+.header {
+  background-color: $background-color;
+  height: 72px;
+  padding: 0px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $font-title-color;
+}
+
+.headerbar {
+  font-size: 30px;
+  cursor: pointer;
+}
+.headerhome {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.logo {
+  height: 25px;
+  cursor: pointer;
+  opacity: 0.9;
+
+  &:hover{
+    opacity: 1.1;
+  }
+}
+
+.headerlistvarbox {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  left: 0px;
+  gap: 40px;
+  width: 300px;
+  height: 100%;
+  padding-top: 23.5px;
+  padding-left: 40px;
+  color: $font-title-color;
+  background: $components-color;
+  animation-name: listvar;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes listvar {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.postingus, .aboutus{
+  display: flex;
+  color: $font-title-color;
+  opacity: 0.9;
+
+  &:hover{
+    opacity: 1;
+    scale:(1.01);
+  }
+}
+
+.FaGithub, .FaBook{
+  font-size: 20px;
+}
+
+a:link { 
+  text-decoration-line: none;
+ }
+  
+a:visited { 
+  text-decoration: none;
+ }

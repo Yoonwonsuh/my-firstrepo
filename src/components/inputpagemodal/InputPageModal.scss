@@ -1,0 +1,62 @@
+@import "../../common/color.scss";
+
+.modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.modalBox {
+
+  display: flex;
+  flex-direction: column;  
+  margin: 15% auto;
+  max-width: 450px;
+  border: 1px $font-title-color solid;
+  border-radius: 5px;
+  background: $components-color;
+  padding: 20px;
+}
+
+.formBox {
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+}
+
+.searchMovieInput {
+  border: $font-title-color 1px solid;
+  width:400px;
+  margin: auto;
+  border-radius: 10px;
+  color: white;
+  background: $components-color;
+  padding: 10px;
+}
+
+.imgBox2 {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 15px;
+  color: $font-primary;
+}
+
+.imgCard {
+  margin:auto;
+  max-height: 100px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+  }
+}

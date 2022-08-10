@@ -1,0 +1,131 @@
+@import "../../common/color.scss";
+
+.inputWrap {
+  border: none;
+  width: 100%;
+  
+  min-height: 87.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputcontainer {
+  margin: 10px auto;
+  border: 1px $font-title-color solid;
+  border-radius: 10px;
+  background: $components-color;
+  width: 800px;
+  color: $font-primary;
+  height: 100%;
+  padding: 40px;
+}
+
+.faArrowLeft {
+  color: $font-title-color;
+  margin-bottom: 20px;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.1;
+  }
+}
+.inputbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgbox {
+  width: 300px;
+  height: 450px;
+
+  background-color: $components-color;
+}
+
+.noneimg {
+  display: flex;
+  color: $font-title-color;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 40px;
+  width: 100%;
+  height: 100%;
+  background: white;
+  cursor: pointer;
+}
+
+.formbox {
+  display: grid;
+  margin: auto 20px;
+  min-width: 400px;
+  grid-gap: 15px;
+}
+
+.formbox input {
+  border: $font-title-color 1px solid;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  background: $components-color;
+  padding: 15px;
+}
+
+.searchBox {
+  vertical-align: center;
+}
+
+.searchImg {
+  border: $font-title-color 1px solid;
+  background: $background-color;
+  color: $font-primary;
+  padding: 5px;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 5px;
+
+  &:hover {
+    background: $background-color;
+    transition: all 0.3s;
+    color: $font-title-color;
+  }
+}
+
+.inputBody {
+  border: $font-title-color 1px solid;
+  border-radius: 5px;
+  color: white;
+  background: $components-color;
+  height: 250px;
+  padding: 15px;
+  text-align: top;
+}
+.imgtool {
+  max-width: 100%;
+  max-height: 100%;
+  cursor: pointer;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+.addButton {
+  border: $font-title-color 1px solid;
+  border-radius: 5px;
+  color: white;
+  background: $font-title-color;
+  padding: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: $background-color;
+    transition: all 0.3s;
+    color: $font-title-color;
+  }
+}
