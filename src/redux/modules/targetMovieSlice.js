@@ -6,7 +6,7 @@ export const getMovieThunk = createAsyncThunk(
   "getMovie",
   async (payload, api) => {
     try {
-      const data = await axios.get(`${serverUrl}/movies${payload}`);
+      const data = await axios.get(`${serverUrl}/movies/${payload}`);
       return api.fulfillWithValue(data.data);
     } catch (e) {
       return api.rejectWithValue(e);
@@ -18,7 +18,7 @@ export const editMovieThunk = createAsyncThunk(
   "editMovie",
   async (payload, api) => {
     try {
-      axios.patch(`${serverUrl}/movies${payload.id}`, payload);
+      axios.patch(`${serverUrl}/movies/${payload.id}`, payload);
       return api.fulfillWithValue(payload);
     } catch (e) {
       return api.rejectWithValue(e);

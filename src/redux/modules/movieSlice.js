@@ -28,7 +28,7 @@ export const delMoviesThunk = createAsyncThunk(
   "delMovies",
   async (payload, api) => {
     try {
-      axios.delete(`${serverUrl}${payload}`);
+      axios.delete(`${serverUrl}/movies/${payload}`);
       return api.fulfillWithValue(payload);
     } catch (e) {
       return api.rejectWithValue(e);
