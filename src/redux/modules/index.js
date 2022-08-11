@@ -1,1 +1,1 @@
-export const serverUrl = process.env.REACT_APP_MOVIE_URL
+export const serverUrl = process.env.REACT_APP_MOVIE_URL;
