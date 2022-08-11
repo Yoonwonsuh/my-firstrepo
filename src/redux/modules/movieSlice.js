@@ -6,7 +6,7 @@ export const getMoviesThunk = createAsyncThunk(
   "getMovies",
   async (payload, api) => {
     try {
-      const data = await axios.get(`${serverUrl}`);
+      const data = await axios.get(`${serverUrl}/movies`);
       return api.fulfillWithValue(data.data);
     } catch (e) {}
   }
@@ -16,7 +16,7 @@ export const addMoviesThunk = createAsyncThunk(
   "postMovies",
   async (payload, thunkapi) => {
     try {
-      const data = await axios.post(`${serverUrl}`, payload);
+      const data = await axios.post(`${serverUrl}/movies`, payload);
       return thunkapi.fulfillWithValue(data.data);
     } catch (e) {
       return thunkapi.rejectWithValue(e);
