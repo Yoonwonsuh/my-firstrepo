@@ -1,11 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import {serverUrl} from '.'
 
 export const getMoviesThunk = createAsyncThunk(
   "getMovies",
   async (payload, api) => {
     try {
-      const data = await axios.get("https://myfirst-repo.herokuapp.com/movies");
+      const data = await axios.get(`${serverUrl}`);
       return api.fulfillWithValue(data.data);
     } catch (e) {}
   }
@@ -15,7 +16,7 @@ export const addMoviesThunk = createAsyncThunk(
   "postMovies",
   async (payload, thunkapi) => {
     try {
-      const data = await axios.post("https://myfirst-repo.herokuapp.com/movies", payload);
+      const data = await axios.post(`${serverUrl}`, payload);
       return thunkapi.fulfillWithValue(data.data);
     } catch (e) {
       return thunkapi.rejectWithValue(e);
@@ -27,7 +28,7 @@ export const delMoviesThunk = createAsyncThunk(
   "delMovies",
   async (payload, api) => {
     try {
-      axios.delete(`https://myfirst-repo.herokuapp.com/movies/${payload}`);
+      axios.delete(`${serverUrl}${payload}`);
       return api.fulfillWithValue(payload);
     } catch (e) {
       return api.rejectWithValue(e);

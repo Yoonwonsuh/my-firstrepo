@@ -1,11 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { serverUrl } from ".";
 import axios from "axios";
 
 export const getMovieThunk = createAsyncThunk(
   "getMovie",
   async (payload, api) => {
     try {
-      const data = await axios.get(`https://myfirst-repo.herokuapp.com/movies/${payload}`);
+      const data = await axios.get(`${serverUrl}${payload}`);
       return api.fulfillWithValue(data.data);
     } catch (e) {
       return api.rejectWithValue(e);
@@ -17,7 +18,7 @@ export const editMovieThunk = createAsyncThunk(
   "editMovie",
   async (payload, api) => {
     try {
-      axios.patch(`https://myfirst-repo.herokuapp.com/movies/${payload.id}`, payload);
+      axios.patch(`${serverUrl}${payload.id}`, payload);
       return api.fulfillWithValue(payload);
     } catch (e) {
       return api.rejectWithValue(e);
