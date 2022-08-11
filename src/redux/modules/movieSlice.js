@@ -49,15 +49,15 @@ export const movieSlice = createSlice({
       state.movies = action.payload;
     },
     [getMoviesThunk.rejected]: (state, action) => {
-      console.log(state);
+      // console.log(state);
       state.error = action.payload;
     },
     [getMoviesThunk.pending]: (state, action) => {
-      console.log(action);
-      console.log(state);
+      // console.log(action);
+      // console.log(state);
     },
     [addMoviesThunk.pending]: (state) => {
-      console.log(state);
+      // console.log(state);
     },
     [addMoviesThunk.fulfilled]: (state, action) => {
       state.movies = [...state.movies, action.payload];

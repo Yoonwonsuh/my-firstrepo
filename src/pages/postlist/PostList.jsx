@@ -15,7 +15,6 @@ const PostList = () => {
   }, [dispatch]);
 
   let {movies} = useSelector((state) => state.movies);
-  console.log(movies);
 
   return (
     <div className="movie-wrapper">
